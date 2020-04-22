@@ -21,7 +21,6 @@ def print_size_on_window(size):
         mylist.insert(END, str(f"Directory size: {round(size*0.000001, 2)} MB"))
     else:
         mylist.insert(END, str(f"Directory size: {size} Bytes"))
-    #mylist.insert(END, str(f"Directory size: {size} Bytes or {round(size*0.000001, 2)} MB or {round(size*1e-9, 2)} GB"))
     mylist.insert(END, str("---------------------------------------------------------------------------------------"))
     mylist.yview(END)
 
@@ -51,7 +50,7 @@ scrollbar = Scrollbar(root)
 
 scrollbar.pack(side = RIGHT, fill=Y)
 mylist = Listbox(root, yscrollcommand = scrollbar.set, height = 100, font=("Arial", 11))
-mylist.pack(fill=BOTH) #side = LEFT, fill = BOTH )
+mylist.pack(fill=BOTH)
 
 scrollbar.config(command = mylist.yview)
 
